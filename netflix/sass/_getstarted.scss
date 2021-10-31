@@ -49,9 +49,10 @@
       display: flex;
       align-items: center;
       position: relative;
+      border-bottom: 2px solid transparent;
 
       &:focus-within {
-        border-bottom: 2px solid rgb(233, 79, 79);
+        border-bottom: 2px solid rgb(236, 146, 12);
       }
       label {
         display: block;

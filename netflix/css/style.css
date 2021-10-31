@@ -136,9 +136,10 @@ header::after {
   display: flex;
   align-items: center;
   position: relative;
+  border-bottom: 2px solid transparent;
 }
 .getstarted .emailbox .email_input:focus-within {
-  border-bottom: 2px solid #e94f4f;
+  border-bottom: 2px solid #ec920c;
 }
 .getstarted .emailbox .email_input label {
   display: block;
