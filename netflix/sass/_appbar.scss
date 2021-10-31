@@ -1,0 +1,57 @@
+.appbar {
+  position: relative;
+  z-index: 1000;
+  &_wrapper {
+    padding: 28px 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .left {
+    .logo {
+      width: 90px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    .languages {
+      margin-right: 10px;
+      color: $white;
+      button {
+        display: flex;
+        border: 1px solid $white;
+        padding: 5px 8px;
+        align-items: center;
+        background-color: transparent;
+        color: inherit;
+        border-radius: 3px;
+        font-size: 1.45rem;
+        div {
+          margin: 0 3px;
+        }
+      }
+      ul {
+        display: none;
+      }
+    }
+  }
+
+  .sign-in_btn {
+    display: flex;
+    border: 1px solid $white;
+    padding: 5px 8px;
+    background-color: $red;
+    color: $white;
+    border-radius: 3px;
+    font-weight: 500;
+    border: none;
+
+    font-size: 1.45rem;
+  }
+}
