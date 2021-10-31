@@ -19,3 +19,61 @@ header {
     );
   }
 }
+
+.enjoy_section {
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $dark;
+
+  &_left {
+    margin: 0 auto;
+    width: 90%;
+  }
+  &_right {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+.section_textbox {
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 1rem;
+
+  &--title {
+    margin-bottom: 1.2rem;
+  }
+  &--desc {
+    line-height: 1.7;
+    font-size: 1.7rem;
+  }
+}
+
+.animation_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+
+  .image_container {
+    // max-width: 233px;
+    position: relative;
+    z-index: 200;
+    img {
+      width: 100%;
+    }
+  }
+  .video_container {
+    position: absolute;
+    top: 51px;
+    left: 44px;
+    max-width: 233px;
+    video {
+      width: 100%;
+    }
+  }
+}

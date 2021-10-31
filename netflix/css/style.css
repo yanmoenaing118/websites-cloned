@@ -89,6 +89,60 @@ header::after {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 5%, rgba(0, 0, 0, 0.1));
 }
 
+.enjoy_section {
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+.enjoy_section_left {
+  margin: 0 auto;
+  width: 90%;
+}
+.enjoy_section_right {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.section_textbox {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 1rem;
+}
+.section_textbox--title {
+  margin-bottom: 1.2rem;
+}
+.section_textbox--desc {
+  line-height: 1.7;
+  font-size: 1.7rem;
+}
+
+.animation_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+}
+.animation_container .image_container {
+  position: relative;
+  z-index: 200;
+}
+.animation_container .image_container img {
+  width: 100%;
+}
+.animation_container .video_container {
+  position: absolute;
+  top: 51px;
+  left: 44px;
+  max-width: 233px;
+}
+.animation_container .video_container video {
+  width: 100%;
+}
+
 .getstarted {
   z-index: 100;
   position: relative;
