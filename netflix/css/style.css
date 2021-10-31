@@ -10,7 +10,6 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font: inherit;
 }
 
 body {
@@ -18,13 +17,17 @@ body {
 }
 
 .appbar {
+  height: 85px;
+  align-items: center;
   position: relative;
   z-index: 1000;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
 }
 .appbar_wrapper {
-  padding: 28px 20px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
+  height: 100%;
 }
 .appbar .left .logo {
   width: 90px;
@@ -48,8 +51,8 @@ body {
   align-items: center;
   background-color: transparent;
   color: inherit;
-  border-radius: 3px;
-  font-size: 1.45rem;
+  border-radius: 2px;
+  font-size: 1.4rem;
 }
 .appbar .right .languages button div {
   margin: 0 3px;
@@ -64,9 +67,9 @@ body {
   background-color: #e50914;
   color: #fff;
   border-radius: 3px;
-  font-weight: 500;
+  font-weight: lighter;
   border: none;
-  font-size: 1.45rem;
+  font-size: 1.4rem;
 }
 
 header {
@@ -81,10 +84,104 @@ header::after {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  background: #e0e0e0;
-  background: radial-gradient(circle, rgba(224, 224, 224, 0.5) 2%, black 100%), radial-gradient(circle, rgba(224, 224, 224, 0.5) 2%, black 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 5%, rgba(0, 0, 0, 0.1));
+}
+
+.getstarted {
+  z-index: 100;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(80vh - 85px);
+}
+.getstarted .textbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+.getstarted .textbox h1 {
+  font-size: 2.55rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+.getstarted .textbox .canceltext {
+  font-size: 1.8rem;
+  margin-bottom: 1.4rem;
+}
+.getstarted .textbox p {
+  line-height: 1.6;
+  padding: 0 2rem;
+  font-size: 1.6rem;
+}
+.getstarted .emailbox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.getstarted .emailbox .email_input {
+  margin-bottom: 1.6rem;
+  width: 90%;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.getstarted .emailbox .email_input:focus-within {
+  border-bottom: 2px solid #e94f4f;
+}
+.getstarted .emailbox .email_input label {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 3px;
+  left: 0.8rem;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  padding-bottom: 0.3rem;
+}
+.getstarted .emailbox .email_input input[type=email] {
+  display: block;
+  padding: 0 0.8rem;
+  color: #010101;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.getstarted .emailbox .email_input input[type=email]:focus::placeholder {
+  opacity: 0;
+}
+.getstarted .emailbox .email_input input[type=email]:focus + label {
+  opacity: 1;
+}
+.getstarted .emailbox button {
+  text-transform: capitalize;
+  background-color: #e50914;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.getstarted .emailbox button span {
+  margin-left: 1rem;
+  font-weight: lighter;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
