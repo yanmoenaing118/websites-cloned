@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Roboto:wght@100;300&family=Zen+Antique+Soft&family=Zen+Maru+Gothic:wght@400;500;700&display=swap");
 html {
   font-size: 62.5%;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 *,
@@ -99,6 +99,7 @@ header::after {
   height: calc(80vh - 85px);
 }
 .getstarted .textbox {
+  width: 85%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -114,11 +115,12 @@ header::after {
 .getstarted .textbox .canceltext {
   font-size: 1.8rem;
   margin-bottom: 1.4rem;
+  padding: 0;
 }
 .getstarted .textbox p {
   line-height: 1.6;
-  padding: 0 2rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  padding: 0 1rem;
 }
 .getstarted .emailbox {
   width: 100%;
