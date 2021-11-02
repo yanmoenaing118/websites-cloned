@@ -18,19 +18,18 @@ body {
 
 .appbar {
   height: 85px;
-  align-items: center;
   position: relative;
   z-index: 1000;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
 }
 .appbar_wrapper {
-  padding: 0 20px;
+  padding: 2.8rem 7rem;
   display: flex;
   align-items: center;
   height: 100%;
 }
 .appbar .left .logo {
-  width: 90px;
+  width: 180px;
 }
 .appbar .left .logo img {
   width: 100%;
@@ -74,14 +73,11 @@ body {
 
 header {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   background-image: url("https://miro.medium.com/max/1400/1*5lyavS59mazOFnb55Z6znQ.png");
   position: relative;
-}
-@media (min-width: 1110px) {
-  header {
-    height: 100vh;
-  }
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 header::after {
   content: "";
@@ -94,262 +90,104 @@ header::after {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 5%, rgba(0, 0, 0, 0.1));
 }
 
-.section {
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-}
-.section_wrapper {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 950px) {
-  .section_wrapper {
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .section_wrapper {
-    max-width: 1110px;
-  }
-}
-.section_wrapper_left {
-  margin: 0 auto;
-  width: 90%;
-}
-@media screen and (min-width: 950px) {
-  .section_wrapper_left {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-}
-.section_wrapper_right {
-  margin: 0 auto;
-  width: 90%;
-}
-@media screen and (min-width: 950px) {
-  .section_wrapper_right {
-    flex: 1;
-  }
-}
-
-.section_textbox {
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 4rem 0;
-}
-@media screen and (min-width: 950px) {
-  .section_textbox {
-    text-align: left;
-    padding-left: 4rem;
-  }
-}
-.section_textbox--title {
-  margin-bottom: 1.2rem;
-}
-@media screen and (min-width: 950px) {
-  .section_textbox--title {
-    font-size: 4.65rem;
-  }
-}
-.section_textbox--desc {
-  line-height: 1.7;
-  font-size: 1.7rem;
-}
-@media screen and (min-width: 950px) {
-  .section_textbox--desc {
-    font-size: 2.5rem;
-  }
-}
-
-.animation_container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.animation_container .image_container {
-  position: relative;
-  z-index: 200;
-}
-.animation_container .image_container img {
+.hero {
+  height: calc(100vh - 85px);
   width: 100%;
-  margin: 3px 0 -10px 1px;
-}
-.animation_container .video_container {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.animation_container .video_container video {
-  max-width: 72%;
+.hero-wrapper {
+  margin: 0 auto;
+  max-width: 75rem;
 }
-@media (min-width: 1170px) {
-  .animation_container .video_container video {
-    max-width: 90%;
-  }
-}
-@media (min-width: 1200px) {
-  .animation_container .video_container video {
-    max-width: 85%;
-  }
-}
-
-.divider {
-  height: 15px;
-  background-color: #141313;
-}
-
-.getstarted {
-  z-index: 100;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: calc(80vh - 85px);
-}
-@media (min-width: 1110px) {
-  .getstarted {
-    height: calc(100vh - 85px);
-  }
-}
-.getstarted .textbox {
-  width: 85%;
-  max-width: 650px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: #fff;
+.hero-textbox {
+  margin: 0 auto;
   text-align: center;
   margin-bottom: 1.6rem;
 }
-.getstarted .textbox h1 {
-  font-size: 2.55rem;
-  font-weight: 600;
-  margin-bottom: 1.6rem;
+.hero-title {
+  font-size: 6.5rem;
+  color: #fff;
+  margin-bottom: 1.3rem;
 }
-@media (min-width: 1110px) {
-  .getstarted .textbox h1 {
-    font-size: 5.5rem;
-    font-weight: bolder;
-  }
-}
-.getstarted .textbox .canceltext {
-  font-size: 1.8rem;
-  margin-bottom: 1.4rem;
-  padding: 0;
-}
-@media (min-width: 1110px) {
-  .getstarted .textbox .canceltext {
-    font-size: 3rem;
-  }
-}
-.getstarted .textbox p {
+.hero-title-sub {
+  font-size: 2.64rem;
+  color: #fff;
   line-height: 1.6;
-  font-size: 1.8rem;
-  padding: 0 1rem;
 }
-@media (min-width: 1110px) {
-  .getstarted .textbox p {
-    font-size: 2.5rem;
-    line-height: 1.4;
-  }
-}
-.getstarted .emailbox {
+
+.emailbox {
   width: 100%;
-  max-width: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
-@media (min-width: 1110px) {
-  .getstarted .emailbox {
-    flex-direction: row;
-    height: 65px;
-  }
-}
-.getstarted .emailbox .email_input {
-  margin-bottom: 1.6rem;
-  width: 90%;
-  height: 50px;
-  background-color: #fff;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  border-bottom: 2px solid transparent;
-}
-@media (min-width: 1110px) {
-  .getstarted .emailbox .email_input {
-    height: 100%;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-top: 15.5px;
-  }
-}
-.getstarted .emailbox .email_input:focus-within {
-  border-bottom: 2px solid #ec920c;
-}
-.getstarted .emailbox .email_input label {
-  display: block;
-  opacity: 0;
-  position: absolute;
-  top: 3px;
-  left: 0.8rem;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-  padding-bottom: 0.3rem;
-}
-.getstarted .emailbox .email_input input[type=email] {
-  display: block;
-  padding: 0 0.8rem;
-  color: #010101;
-  font-size: 1.6rem;
-  border: none;
-  outline: none;
+.emailbox-wrapper {
   width: 100%;
-  transition: all 0.3s ease;
 }
-.getstarted .emailbox .email_input input[type=email]:focus::placeholder {
-  opacity: 0;
-}
-.getstarted .emailbox .email_input input[type=email]:focus + label {
-  opacity: 1;
-}
-.getstarted .emailbox button {
-  text-transform: capitalize;
-  background-color: #e50914;
-  padding: 1rem 1.5rem;
-  font-size: 1.6rem;
-  border: none;
-  border-radius: 2px;
+.emailbox-para {
+  text-align: center;
+  font-size: 1.9rem;
   color: #fff;
+  margin-bottom: 1.6rem;
+}
+.emailbox-input-container {
   display: flex;
-  justify-content: center;
   align-items: center;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 1px;
 }
-@media (min-width: 1110px) {
-  .getstarted .emailbox button {
-    height: 100%;
-    width: 180px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    font-size: 2rem;
-  }
+.emailbox-input {
+  height: 100%;
+  flex: 1;
+  position: relative;
 }
-.getstarted .emailbox button span {
-  margin-left: 1rem;
-  font-weight: lighter;
-  font-size: 2rem;
+.emailbox-input input {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  background-color: transparent;
+  border: none;
+  padding-left: 6px;
+  font-size: 1.65rem;
+}
+.emailbox-input input:valid {
+  border-bottom: 3px solid green;
+}
+.emailbox-input input:focus {
+  outline: none;
+}
+.emailbox-input input:focus:invalid {
+  border-bottom: 3px solid goldenrod;
+}
+.emailbox-input input:focus + label {
+  top: 8px;
+  transform: translateY(0);
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+.emailbox-input label {
+  color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  font-size: 1.6rem;
+}
+
+.button_getstarted {
+  height: 100%;
+  width: 226px;
+  background-color: #e50914;
+  display: block;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
