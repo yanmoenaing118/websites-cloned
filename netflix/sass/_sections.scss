@@ -22,3 +22,65 @@ header {
     );
   }
 }
+
+.section {
+  height: 500px;
+  background-color: $dark;
+  color: $white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .wrapper {
+    height: 100%;
+    max-width: 1110px;
+    display: flex;
+
+    .left {
+      flex: 1;
+      &-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1.6rem;
+        img {
+          width: 90%;
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      &-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+.section-textbox {
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 1.6rem;
+  }
+  p {
+    font-size: 2.8rem;
+  }
+}
+
+.divider {
+  height: 14px;
+  background-color: rgba($dark, 0.8);
+}

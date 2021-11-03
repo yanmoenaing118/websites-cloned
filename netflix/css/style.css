@@ -90,6 +90,63 @@ header::after {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 5%, rgba(0, 0, 0, 0.1));
 }
 
+.section {
+  height: 500px;
+  background-color: black;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.container .wrapper {
+  height: 100%;
+  max-width: 1110px;
+  display: flex;
+}
+.container .wrapper .left {
+  flex: 1;
+}
+.container .wrapper .left-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1.6rem;
+}
+.container .wrapper .left-wrapper img {
+  width: 90%;
+}
+.container .wrapper .right {
+  flex: 1;
+}
+.container .wrapper .right-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .wrapper .right-wrapper img {
+  width: 90%;
+}
+
+.section-textbox h1 {
+  font-size: 5rem;
+  margin-bottom: 1.6rem;
+}
+.section-textbox p {
+  font-size: 2.8rem;
+}
+
+.divider {
+  height: 14px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .hero {
   height: calc(100vh - 85px);
   width: 100%;
@@ -188,6 +245,28 @@ header::after {
   color: #fff;
   cursor: pointer;
   font-size: 2.8rem;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.pt-5 {
+  padding-top: 5rem;
+}
+
+.m5 {
+  margin: 5rem;
+}
+
+.p5 {
+  padding: 5rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
