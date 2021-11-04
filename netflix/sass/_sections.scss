@@ -117,12 +117,13 @@ header {
         align-items: center;
         justify-content: space-between;
         color: #fff;
-        padding: 1em 2em;
+        padding: 1.15em 2em;
         p {
           font-size: 2.7rem;
         }
       }
       &-answer {
+        border-top: 2px solid transparent;
         cursor: pointer;
         overflow: hidden;
         height: 0;
@@ -131,10 +132,11 @@ header {
         p {
           font-size: 2.3rem;
           color: $white;
-          padding: 1em;
+          padding: 1em 1.3em;
         }
 
         &--show {
+          border-top: 2px solid $dark;
           height: auto;
           overflow: auto;
         }

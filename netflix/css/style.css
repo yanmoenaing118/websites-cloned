@@ -177,12 +177,13 @@ header::after {
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  padding: 1em 2em;
+  padding: 1.15em 2em;
 }
 .questions-section .questions-container .question-box p {
   font-size: 2.7rem;
 }
 .questions-section .questions-container .question-answer {
+  border-top: 2px solid transparent;
   cursor: pointer;
   overflow: hidden;
   height: 0;
@@ -191,9 +192,10 @@ header::after {
 .questions-section .questions-container .question-answer p {
   font-size: 2.3rem;
   color: #fff;
-  padding: 1em;
+  padding: 1em 1.3em;
 }
 .questions-section .questions-container .question-answer--show {
+  border-top: 2px solid black;
   height: auto;
   overflow: auto;
 }
@@ -336,6 +338,39 @@ header::after {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer {
+  color: gray;
+  padding: 6rem 0;
+  background-color: black;
+}
+.footer-wrapper {
+  max-width: 980px;
+  margin: auto;
+}
+.footer-wrapper p {
+  padding: 1em 0;
+}
+.footer-wrapper p a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer-navs {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-nav {
+  list-style-type: none;
+}
+.footer-nav--item {
+  padding: 0.5em 0;
+}
+.footer-nav--item a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.25rem;
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=style.css.map */

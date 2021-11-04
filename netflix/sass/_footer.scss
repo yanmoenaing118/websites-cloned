@@ -1,0 +1,34 @@
+.footer {
+  color: gray;
+  padding: 6rem 0;
+  background-color: $dark;
+
+  &-wrapper {
+    max-width: 980px;
+    margin: auto;
+    p {
+      padding: 1em 0;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+
+  &-navs {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-nav {
+    list-style-type: none;
+    &--item {
+      padding: 0.5em 0;
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1.25rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
