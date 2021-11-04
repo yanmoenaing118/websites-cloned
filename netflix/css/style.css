@@ -147,6 +147,75 @@ header::after {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.questions-section {
+  padding: 6.5rem 0;
+  background-color: black;
+}
+.questions-section .questions-container {
+  max-width: 800px;
+  margin: auto;
+}
+.questions-section .questions-container h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 5.57rem;
+  margin-bottom: 4.5rem;
+}
+.questions-section .questions-container .question-list {
+  list-style: none;
+  margin-bottom: 6rem;
+}
+.questions-section .questions-container .question-item {
+  margin-bottom: 1.3rem;
+  background-color: #303030;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.questions-section .questions-container .question-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding: 1em 2em;
+}
+.questions-section .questions-container .question-box p {
+  font-size: 2.7rem;
+}
+.questions-section .questions-container .question-answer {
+  cursor: pointer;
+  overflow: hidden;
+  height: 0;
+  transition: all 1s ease-in;
+}
+.questions-section .questions-container .question-answer p {
+  font-size: 2.3rem;
+  color: #fff;
+  padding: 1em;
+}
+.questions-section .questions-container .question-answer--show {
+  height: auto;
+  overflow: auto;
+}
+.questions-section .questions-container .question-close {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.questions-section .questions-container .question-close div {
+  background-color: #fff;
+  height: 2px;
+  width: 25px;
+  transform-origin: center;
+  position: absolute;
+}
+.questions-section .questions-container .question-close--1 {
+  transform: rotate(90deg);
+}
 .hero {
   height: calc(100vh - 85px);
   width: 100%;

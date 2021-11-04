@@ -84,3 +84,83 @@ header {
   height: 14px;
   background-color: rgba($dark, 0.8);
 }
+
+.questions-section {
+  padding: 6.5rem 0;
+  background-color: $dark;
+
+  .questions-container {
+    max-width: 800px;
+    margin: auto;
+
+    h1 {
+      text-align: center;
+      color: $white;
+      font-size: 5.57rem;
+      margin-bottom: 4.5rem;
+    }
+
+    .question {
+      &-list {
+        list-style: none;
+        margin-bottom: 6rem;
+      }
+      &-item {
+        margin-bottom: 1.3rem;
+        background-color: #303030;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      &-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        padding: 1em 2em;
+        p {
+          font-size: 2.7rem;
+        }
+      }
+      &-answer {
+        cursor: pointer;
+        overflow: hidden;
+        height: 0;
+        transition: all 1s ease-in;
+
+        p {
+          font-size: 2.3rem;
+          color: $white;
+          padding: 1em;
+        }
+
+        &--show {
+          height: auto;
+          overflow: auto;
+        }
+      }
+
+      &-close {
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        div {
+          background-color: $white;
+          height: 2px;
+          width: 25px;
+          transform-origin: center;
+          position: absolute;
+        }
+        &--1 {
+          transform: rotate(90deg);
+        }
+        &--2 {
+        }
+      }
+    }
+  }
+}
