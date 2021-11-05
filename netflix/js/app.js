@@ -1,26 +1,12 @@
-const questionToggleButtons = document.querySelectorAll(".question-close");
-const questionAnswers = document.querySelectorAll(".question-answer");
-/**
- *
- * if q1 is toggled answer1 must be toggled
- * if questionToggleButton is clicked
- *      --> close all
- *      --> open the clicked one
- */
+const questionBoxes = document.querySelectorAll(".question-box");
 
-console.log(questionToggleButtons);
-
-questionToggleButtons.forEach((el, index) => {
-  el.addEventListener("click", (event) => {
-    if (questionAnswers[index].classList.contains("question-answer--show")) {
-      return questionAnswers[index].classList.remove("question-answer--show");
+questionBoxes.forEach((el, idx) => {
+  const myEl = el.nextElementSibling;
+  el.addEventListener("click", (e) => {
+    if (!myEl.classList.contains("question-answer--show")) {
+      myEl.classList.add("question-answer--show");
+    } else {
+      myEl.classList.remove("question-answer--show");
     }
-    questionAnswers.forEach((ansEl) => {
-      if (ansEl.classList.contains("question-answer--show")) {
-        ansEl.classList.remove("question-answer--show");
-      }
-
-      questionAnswers[index].classList.add("question-answer--show");
-    });
   });
 });

@@ -111,6 +111,13 @@
     max-width: 1110px;
     display: flex;
 
+    @include respond(tablet) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 0;
+    }
+
     .left {
       flex: 1;
       &-wrapper {
@@ -121,6 +128,10 @@
         padding: 0 1.6rem;
         img {
           width: 90%;
+
+          @include respond(tablet) {
+            width: 100%;
+          }
         }
       }
     }
@@ -139,19 +150,44 @@
       }
     }
   }
+  .reverse {
+    @include respond(tablet) {
+      flex-direction: column-reverse;
+    }
+  }
 }
 
 .section-textbox {
+  @include respond(tablet) {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
   h1 {
+    @include respond(laptop) {
+      font-size: 3rem;
+    }
     font-size: 5rem;
     margin-bottom: 1.6rem;
   }
   p {
     font-size: 2.8rem;
+    @include respond(laptop) {
+      font-size: 1.9rem;
+    }
   }
 }
 
 .divider {
   height: 14px;
   background-color: rgba($dark, 0.8);
+
+  @include respond(tablet) {
+    height: 6x;
+  }
+
+  @include respond(mobile) {
+    height: 4px;
+  }
 }
