@@ -1,0 +1,138 @@
+header {
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("https://miro.medium.com/max/1400/1*5lyavS59mazOFnb55Z6znQ.png");
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background-image: linear-gradient(
+      to top,
+      rgba($dark, 0.8) 5%,
+      rgba($dark, 0.1)
+    );
+  }
+}
+
+.section {
+  min-height: 500px;
+  background-color: $dark;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(laptop) {
+    min-height: 385px;
+  }
+
+  @include respond(tablet) {
+  }
+}
+
+.questions-section {
+  padding: 6.5rem 0;
+  background-color: $dark;
+
+  .questions-container {
+    max-width: 800px;
+    margin: auto;
+
+    @include respond(tablet) {
+      max-width: 628px;
+    }
+
+    h1 {
+      text-align: center;
+      color: $white;
+      font-size: 5.57rem;
+      margin-bottom: 4.5rem;
+      @include respond(tablet) {
+        font-size: 4.4rem;
+      }
+      @include respond(mobile) {
+        font-size: 3.5rem;
+        padding: 0 1.8rem;
+      }
+    }
+
+    .question {
+      &-list {
+        list-style: none;
+        margin-bottom: 6rem;
+      }
+      &-item {
+        margin-bottom: 1.3rem;
+        background-color: #303030;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      &-box {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        padding: 1.15em 2em;
+        p {
+          font-size: 2.7rem;
+
+          @include respond(tablet) {
+            font-size: 2.5rem;
+          }
+        }
+      }
+      &-answer {
+        border-top: 2px solid transparent;
+        cursor: pointer;
+        overflow: hidden;
+        height: 0;
+        transition: all 1s ease-in;
+
+        p {
+          font-size: 2.3rem;
+          color: $white;
+          padding: 1em 1.3em;
+        }
+
+        &--show {
+          border-top: 2px solid $dark;
+          height: auto;
+          overflow: auto;
+        }
+      }
+
+      &-close {
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        div {
+          background-color: $white;
+          height: 2px;
+          width: 25px;
+          transform-origin: center;
+          position: absolute;
+        }
+        &--1 {
+          transform: rotate(90deg);
+        }
+        &--2 {
+        }
+      }
+    }
+  }
+}

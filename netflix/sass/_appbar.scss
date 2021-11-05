@@ -1,0 +1,100 @@
+.appbar {
+  height: 85px;
+  position: relative;
+  z-index: 1000;
+  background-image: linear-gradient(
+    to bottom,
+    rgba($dark, 1),
+    rgba($dark, 0.8),
+    rgba($dark, 0.1)
+  );
+  &_wrapper {
+    padding: 2.8rem 7rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @include respond(laptop) {
+      padding: 5rem 5rem;
+    }
+
+    @include respond(tablet) {
+      padding: 2.3rem 4rem;
+    }
+
+    @include respond(mobile) {
+      padding: 2rem 2.8rem;
+    }
+
+    @include respond(big-desktop) {
+      padding: 6rem 8rem;
+    }
+  }
+
+  .left {
+    .logo {
+      width: 180px;
+      img {
+        width: 100%;
+      }
+      @include respond(laptop) {
+        width: 150px;
+      }
+      @include respond(tablet) {
+        width: 110px;
+      }
+      @include respond(mobile) {
+        width: 90px;
+      }
+      @include respond(big-desktop) {
+        width: 165px;
+      }
+    }
+  }
+
+  .right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    .languages {
+      margin-right: 10px;
+      color: $white;
+      button {
+        display: flex;
+        border: 1px solid $white;
+        padding: 5px 8px;
+        align-items: center;
+        background-color: transparent;
+        color: inherit;
+        border-radius: 2px;
+        font-size: 1.4rem;
+        div {
+          margin: 0 3px;
+        }
+      }
+      ul {
+        display: none;
+      }
+    }
+  }
+
+  .sign-in_btn {
+    display: flex;
+    border: 1px solid $white;
+    padding: 0.3em 0.6em;
+    background-color: $red;
+    color: $white;
+    border-radius: 3px;
+    font-weight: lighter;
+    border: none;
+    font-size: 2rem;
+
+    @include respond(tablet) {
+      font-size: 1.6rem;
+    }
+
+    @include respond(mobile) {
+      font-size: 1.8rem;
+    }
+  }
+}

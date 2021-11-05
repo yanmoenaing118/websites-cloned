@@ -1,0 +1,51 @@
+.footer {
+  color: gray;
+  padding: 6rem 0;
+  background-color: $dark;
+
+  &-wrapper {
+    max-width: 980px;
+    margin: auto;
+    @include respond(laptop) {
+      max-width: 860px;
+    }
+    @include respond(tablet) {
+      max-width: 680px;
+    }
+    @include respond(mobile) {
+      width: 92%;
+      margin: 0 auto;
+    }
+
+    p {
+      padding: 1em 0;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+
+  &-navs {
+    display: flex;
+    justify-content: space-between;
+    @include respond(mobile) {
+      flex-wrap: wrap;
+    }
+  }
+  &-nav {
+    @include respond(mobile) {
+      width: 50%;
+    }
+    list-style-type: none;
+    &--item {
+      padding: 0.5em 0;
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1.6rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
