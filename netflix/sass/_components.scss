@@ -1,0 +1,157 @@
+.emailbox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-wrapper {
+    width: 100%;
+  }
+  &-para {
+    text-align: center;
+    font-size: 1.9rem;
+    color: $white;
+    margin-bottom: 1.6rem;
+    @include respond(tablet) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &-input-container {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: $white;
+    border-radius: 1px;
+
+    @include respond(tablet) {
+      flex-direction: column;
+      background-color: transparent;
+    }
+  }
+
+  &-input {
+    height: 100%;
+    flex: 1;
+    position: relative;
+    input {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      border: none;
+      padding-left: 6px;
+      font-size: 1.65rem;
+
+      &:valid {
+        border-bottom: 3px solid green;
+      }
+
+      &:focus {
+        outline: none;
+        &:invalid {
+          border-bottom: 3px solid goldenrod;
+        }
+        & + label {
+          top: 8px;
+          transform: translateY(0);
+          font-size: 1.1rem;
+          font-weight: bolder;
+        }
+      }
+
+      @include respond(tablet) {
+        width: 100%;
+        background-color: $white;
+        padding: 1.9rem 0.8rem;
+      }
+    }
+
+    label {
+      color: rgba($dark, 0.7);
+      position: absolute;
+      top: 50%;
+      left: 6px;
+      transform: translateY(-50%);
+      transition: all 0.3s ease;
+      font-size: 1.6rem;
+    }
+    @include respond(tablet) {
+      width: 100%;
+      background-color: $white;
+      margin-bottom: 2.2rem;
+    }
+  }
+}
+
+.button_getstarted {
+  height: 100%;
+  width: 226px;
+  background-color: $red;
+  display: block;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  font-size: 2.8rem;
+  @include respond(tablet) {
+    padding: 0.35em 0;
+  }
+
+  @include respond(mobile) {
+    padding: 0.25em 0;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .wrapper {
+    height: 100%;
+    max-width: 1110px;
+    display: flex;
+
+    .left {
+      flex: 1;
+      &-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1.6rem;
+        img {
+          width: 90%;
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      &-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+.section-textbox {
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 1.6rem;
+  }
+  p {
+    font-size: 2.8rem;
+  }
+}
+
+.divider {
+  height: 14px;
+  background-color: rgba($dark, 0.8);
+}

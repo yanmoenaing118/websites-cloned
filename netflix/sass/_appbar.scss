@@ -13,6 +13,22 @@
     display: flex;
     align-items: center;
     height: 100%;
+
+    @include respond(laptop) {
+      padding: 5rem 5rem;
+    }
+
+    @include respond(tablet) {
+      padding: 2.3rem 4rem;
+    }
+
+    @include respond(mobile) {
+      padding: 2rem 2.8rem;
+    }
+
+    @include respond(big-desktop) {
+      padding: 6rem 8rem;
+    }
   }
 
   .left {
@@ -20,6 +36,18 @@
       width: 180px;
       img {
         width: 100%;
+      }
+      @include respond(laptop) {
+        width: 150px;
+      }
+      @include respond(tablet) {
+        width: 110px;
+      }
+      @include respond(mobile) {
+        width: 90px;
+      }
+      @include respond(big-desktop) {
+        width: 165px;
       }
     }
   }
@@ -53,13 +81,20 @@
   .sign-in_btn {
     display: flex;
     border: 1px solid $white;
-    padding: 5px 8px;
+    padding: 0.3em 0.6em;
     background-color: $red;
     color: $white;
     border-radius: 3px;
     font-weight: lighter;
     border: none;
+    font-size: 2rem;
 
-    font-size: 1.4rem;
+    @include respond(tablet) {
+      font-size: 1.6rem;
+    }
+
+    @include respond(mobile) {
+      font-size: 1.8rem;
+    }
   }
 }

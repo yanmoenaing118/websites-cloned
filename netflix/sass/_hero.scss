@@ -4,7 +4,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -1.6rem;
   &-wrapper {
+    width: 90%;
     margin: 0 auto;
     max-width: $hero-max-width;
   }
@@ -23,84 +25,20 @@
       font-size: 2.64rem;
       color: $white;
       line-height: 1.6;
-    }
-  }
-}
-
-.emailbox {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &-wrapper {
-    width: 100%;
-  }
-  &-para {
-    text-align: center;
-    font-size: 1.9rem;
-    color: $white;
-    margin-bottom: 1.6rem;
-  }
-
-  &-input-container {
-    display: flex;
-    align-items: center;
-    height: 70px;
-    background-color: $white;
-    border-radius: 1px;
-  }
-
-  &-input {
-    height: 100%;
-    flex: 1;
-    position: relative;
-    input {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      z-index: 100;
-      background-color: transparent;
-      border: none;
-      padding-left: 6px;
-      font-size: 1.65rem;
-
-      &:valid {
-        border-bottom: 3px solid green;
+      @include respond(tablet) {
+        font-size: 2.4rem;
       }
 
-      &:focus {
-        outline: none;
-        &:invalid {
-          border-bottom: 3px solid goldenrod;
-        }
-        & + label {
-          top: 8px;
-          transform: translateY(0);
-          font-size: 1.1rem;
-          font-weight: bolder;
-        }
+      @include respond(mobile) {
+        font-size: 2rem;
       }
     }
 
-    label {
-      color: rgba($dark, 0.7);
-      position: absolute;
-      top: 50%;
-      left: 6px;
-      transform: translateY(-50%);
-      transition: all 0.3s ease;
-      font-size: 1.6rem;
+    @include respond(tablet) {
+      font-size: 6rem;
+    }
+    @include respond(tablet) {
+      font-size: 5.5rem;
     }
   }
-}
-
-.button_getstarted {
-  height: 100%;
-  width: 226px;
-  background-color: $red;
-  display: block;
-  border: none;
-  color: $white;
-  cursor: pointer;
-  font-size: 2.8rem;
 }

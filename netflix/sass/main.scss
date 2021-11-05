@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Roboto:wght@100;300&family=Zen+Antique+Soft&family=Zen+Maru+Gothic:wght@400;500;700&display=swap");
-
+@import "responsive.scss";
 @import "index.scss";
 @import "appbar.scss";
 @import "sections.scss";
 @import "hero.scss";
 @import "utils.scss";
 @import "footer.scss";
+@import "components.scss";
