@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.header .logo {
+  width: 110px;
+  margin-right: 2em;
+}
+.header .logo img {
+  width: 100%;
+}
+.header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.header .left li {
+  margin-right: 1.45em;
+}
+.header .left li a {
+  text-decoration: none;
+  color: #262626;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  padding: 0.5em 0;
+  border-bottom: 2.5px solid transparent;
+  transition: all 1s ease;
+}
+.header .left li a:hover, .header .left li a:focus, .header .left li a:active {
+  border-bottom: 2.5px solid #262626;
+}
+.header .right {
+  margin-left: auto;
+}
+.header .right li {
+  margin-left: 0.1em;
+}
+.header .right li button {
+  cursor: pointer;
+  padding: 1em;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  transition: all 1s ease;
+}
+.header .right li button span {
+  color: #262626;
+  font-weight: 300;
+  font-size: 0.85rem;
+  margin-right: 0.4em;
+  border-bottom: 2px solid transparent;
+  padding: 0.3em 0;
+}
+.header .right li button span a {
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
+.header .right li button img {
+  width: 16px;
+  height: 16px;
+}
+.header .right li button img.drop-down {
+  width: 10px;
+  height: 10px;
+}
+.header .right li button img.signin {
+  width: 32px;
+  height: 32px;
+  margin-top: -0.35em;
+}
+.header .right li button:hover span, .header .right li button:active span {
+  border-bottom: 2px solid black;
+}
+.header .right li button:focus {
+  outline: 1px dotted #262626;
+}
+.header .right li button:focus span {
+  border-bottom: 2px solid black;
+}
+
+/*# sourceMappingURL=style.css.map */
