@@ -1,0 +1,39 @@
+.gift-sale {
+  a {
+    display: block;
+    background-color: $dark-red;
+    color: $white;
+    font-size: 0.8em;
+    padding: 0.8em 0;
+    text-align: center;
+
+    span {
+      display: inline-block;
+      position: relative;
+      &::after {
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        right: -5px;
+        content: "\1433";
+        vertical-align: top;
+        transition: all 200ms ease-in-out;
+        font-family: "MWF-MDL2";
+        text-decoration: none;
+      }
+    }
+  }
+
+  &:hover {
+    text-decoration: underline;
+    span {
+      &::after {
+        right: -10px;
+      }
+    }
+  }
+}
+
+.section-shop {
+  overflow: hidden;
+}

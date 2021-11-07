@@ -1,0 +1,127 @@
+.btn {
+  position: relative;
+  text-decoration: none;
+  width: 166px;
+  height: 48px;
+
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 36px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.6s ease;
+
+  &-primary {
+    background-color: $black;
+    color: $white;
+    &::after {
+      position: absolute;
+      height: 100%;
+      width: 10px;
+      top: 0;
+      right: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      content: "\1433";
+      vertical-align: top;
+      transition: all 200ms ease-in-out;
+      font-family: "MWF-MDL2";
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+    &:hover {
+      text-decoration: underline;
+      &::after {
+        right: 40px;
+      }
+    }
+  }
+
+  &-secondary {
+    color: $dark-red;
+    background-color: transparent;
+
+    &::after {
+      position: absolute;
+      height: 100%;
+      width: 10px;
+      top: 0;
+      right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      content: "\1433";
+      vertical-align: top;
+      transition: all 200ms ease-in-out;
+      font-family: "MWF-MDL2";
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      &::after {
+        right: 15px;
+      }
+    }
+  }
+
+  &-text {
+    display: inline-block;
+    width: auto;
+    height: auto;
+  }
+}
+
+.textbox {
+  border: 1px solid reds;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1em;
+  line-height: 1.6;
+
+  .tip {
+    background-color: $white;
+    color: $dark-red;
+    font-size: 0.8rem;
+    padding: 0.3em;
+    margin-bottom: 0.8em;
+    font-weight: 400;
+  }
+
+  span {
+    color: $black;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 1.3em 0;
+    font-weight: 300;
+  }
+
+  &-actions {
+    display: flex;
+    button {
+      margin-right: 1.8em;
+    }
+  }
+  &--inslider {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 5%;
+    top: 0;
+    z-index: 1000;
+    max-width: 35em;
+  }
+}
