@@ -1,7 +1,37 @@
 .container {
-  max-width: 90%;
-  margin: auto;
-
   &-wrapper {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  .col {
+    // padding: 0.5em;
+    // border: 1px solid $dark-red;
+    margin-right: 1em;
+    &:last-child {
+      margin-right: 0;
+    }
+    &-1 {
+      width: 14%;
+    }
+    &-2 {
+      width: 30%;
+    }
+    &-3 {
+      width: 39%;
+    }
+    &-4 {
+      width: 62%;
+    }
+    &-5 {
+      width: 78%;
+    }
+    &-6 {
+      width: 94%;
+    }
   }
 }

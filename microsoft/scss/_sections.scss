@@ -37,3 +37,74 @@
 .section-shop {
   overflow: hidden;
 }
+
+.section-services {
+  .services {
+    padding: 3.5em 8.5em;
+  }
+}
+
+.section-products {
+  padding: 3.5em 0;
+  padding-top: 0;
+}
+
+.section-intel {
+  .intel {
+    background-color: rebeccapurple;
+    padding: 3em;
+    background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWO6HY?ver=ce45&q=0&m=8&h=609&w=1083&b=%23FFFFFFFF&l=f&x=171&y=286&s=2092&d=1176&aim=true);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white;
+  }
+}
+
+.section-business {
+  padding: 3em 0;
+  h2 {
+    margin-bottom: 0.95rem;
+    color: #404040;
+  }
+}
+
+.section-covid {
+  .covid-response {
+    background-color: $slide-bgcolor;
+
+    line-height: 1.6;
+    text-align: center;
+    padding: 1.4em 0;
+    h1 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 0.9rem;
+      padding: 0.4em 0;
+    }
+  }
+}
+
+.section-social {
+  .social {
+    padding: 2.6em 0;
+    display: flex;
+    align-items: center;
+    p {
+      color: $text-color-gray--2;
+      font-weight: lighter;
+    }
+    ul {
+      margin-left: 0.8em;
+      list-style: none;
+      display: flex;
+      li {
+        margin-right: 0.4em;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
