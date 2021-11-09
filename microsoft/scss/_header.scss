@@ -35,6 +35,20 @@
           border-bottom: 2.5px solid $text-color-gray--1;
         }
       }
+      @include respond(mobile) {
+        display: none;
+      }
+    }
+    .hide {
+      @include respond(laptop) {
+        display: none;
+      }
+    }
+    .more {
+      display: none;
+      @include respond(laptop) {
+        display: block;
+      }
     }
   }
   .right {
@@ -62,10 +76,14 @@
             color: inherit;
             font: inherit;
           }
+          @include respond(laptop) {
+            display: none;
+          }
         }
         img {
           width: 16px;
           height: 16px;
+
           &.drop-down {
             width: 10px;
             height: 10px;

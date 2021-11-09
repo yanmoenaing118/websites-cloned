@@ -163,30 +163,50 @@ body {
 .columns {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .columns .col {
+  /*
+    col-1 = calc(100% / 6) 
+  */
   margin-right: 1em;
+  margin-bottom: 1em;
 }
 .columns .col:last-child {
   margin-right: 0;
 }
 .columns .col-1 {
-  width: 14%;
+  width: calc(16.6666666667% - 5em);
 }
 .columns .col-2 {
-  width: 30%;
+  width: calc(2 * (16.6666666667% - 5em) + 1em);
 }
 .columns .col-3 {
-  width: 39%;
+  width: calc(3 * (16.6666666667% - 5em) + 2em);
 }
 .columns .col-4 {
-  width: 62%;
+  width: calc(4 * (16.6666666667% - 5em) + 3em);
 }
 .columns .col-5 {
-  width: 78%;
+  width: calc(5 * (16.6666666667% - 5em) + 4em);
 }
 .columns .col-6 {
-  width: 94%;
+  width: calc(6 * (16.6666666667% - 5em) + 5em);
+}
+@media (max-width: 1024px) {
+  .columns .col-1 {
+    width: 25%;
+    margin-right: 0;
+  }
+  .columns .col-2 {
+    margin-right: 0;
+    width: 45%;
+  }
+}
+@media (max-width: 480px) {
+  .columns .col-1, .columns .col-2 {
+    width: 100%;
+  }
 }
 
 .header-container {
@@ -220,6 +240,24 @@ body {
 .header .left li a:hover, .header .left li a:focus, .header .left li a:active {
   border-bottom: 2.5px solid #262626;
 }
+@media (max-width: 480px) {
+  .header .left li {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .header .left .hide {
+    display: none;
+  }
+}
+.header .left .more {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .header .left .more {
+    display: block;
+  }
+}
 .header .right {
   margin-left: auto;
 }
@@ -248,6 +286,11 @@ body {
   text-decoration: none;
   color: inherit;
   font: inherit;
+}
+@media (max-width: 1024px) {
+  .header .right li button span {
+    display: none;
+  }
 }
 .header .right li button img {
   width: 16px;
@@ -323,6 +366,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+}
+@media (max-width: 480px) {
+  .section-intel {
+    display: none;
+  }
 }
 
 .section-business {
@@ -417,6 +465,11 @@ body {
   align-items: center;
   cursor: pointer;
 }
+@media (max-width: 1024px) {
+  .slider {
+    display: none;
+  }
+}
 
 .footer {
   background-color: #f2f2f2;
@@ -460,6 +513,11 @@ body {
 }
 .footer .sitemap li .earth span {
   margin-left: 0.6em;
+}
+@media (max-width: 480px) {
+  .footer .sitemap {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

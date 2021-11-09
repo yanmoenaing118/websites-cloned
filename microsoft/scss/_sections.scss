@@ -59,6 +59,10 @@
     background-size: cover;
     color: $white;
   }
+
+  @include respond(mobile) {
+    display: none;
+  }
 }
 
 .section-business {

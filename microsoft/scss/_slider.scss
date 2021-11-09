@@ -50,4 +50,8 @@
       cursor: pointer;
     }
   }
+
+  @include respond(laptop) {
+    display: none;
+  }
 }
