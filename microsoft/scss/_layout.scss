@@ -1,0 +1,64 @@
+.container {
+  &-wrapper {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .col {
+    // padding: 0.5em;
+    // border: 1px solid $dark-red;
+    /*
+      col-1 = calc(100% / 6) 
+    */
+    margin-right: 1em;
+    margin-bottom: 1em;
+    &:last-child {
+      margin-right: 0;
+    }
+    &-1 {
+      width: calc((100% / 6) - 5 * 1em);
+    }
+    &-2 {
+      width: calc(2 * ((100% / 6) - 5 * 1em) + 1em);
+    }
+    &-3 {
+      width: calc(3 * ((100% / 6) - 5 * 1em) + 2em);
+    }
+    &-4 {
+      width: calc(4 * ((100% / 6) - 5 * 1em) + 3em);
+    }
+    &-5 {
+      width: calc(5 * ((100% / 6) - 5 * 1em) + 4em);
+    }
+    &-6 {
+      width: calc(6 * ((100% / 6) - 5 * 1em) + 5em);
+    }
+
+    @include respond(laptop) {
+      &-1 {
+        width: 25%;
+        margin-right: 0;
+      }
+      &-2 {
+        margin-right: 0;
+        width: 45%;
+      }
+    }
+
+    @include respond(mobile) {
+      &-1,
+      &-2 {
+        width: 100%;
+      }
+    }
+
+    // @include respond(mobile) {
+    //   width: 100%;
+    // }
+  }
+}
