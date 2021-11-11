@@ -1,3 +1,41 @@
 .section-title {
   padding: 0 0 1.1em 2.3em;
+  display: flex;
+  align-items: center;
+
+  .switcher {
+    margin-left: 1.5em;
+    display: flex;
+    border: 1px solid rgba(var(--tmdbDarkBlue));
+    border-radius: 1em;
+    height: 30px;
+    align-items: center;
+    overflow: hidden;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0.8em;
+      height: 100%;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      padding: 0 0.6em;
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: rgba(var(--tmdbDarkBlue), 1);
+    }
+
+    &-active {
+      background-color: rgba(var(--tmdbDarkBlue), 1);
+      border-radius: 1em;
+      a {
+        color: rgba(var(--tmdbLightGreen));
+      }
+    }
+  }
 }

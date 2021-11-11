@@ -1,3 +1,28 @@
 .section-popular {
   padding: 2em 0;
+  padding-bottom: 0;
+}
+
+.section-trailers {
+  .trailers {
+    // background-image: ,
+    //   linear-gradient(to right, rgba(red, 1), rgba(var(--tmdbDarkBlue), 1));
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background-image: linear-gradient(
+        to right,
+        rgba(var(--tmdbDarkBlue), 0.8),
+        rgba(var(--tmdbDarkBlue), 0.6)
+      ),
+      url("https://www.themoviedb.org/t/p/w533_and_h300_bestv2/9IsGcpX1p0iU3eRpiTFrWkg5qqj.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em 0;
+    padding-bottom: 0;
+  }
+  // margin-bottom: 3em;
+}
+
+.section-trending {
+  padding: 2em 0;
 }

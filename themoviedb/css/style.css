@@ -25,6 +25,10 @@
 .subtitle--sm {
   font-size: 1rem;
 }
+.color-white {
+  color: #fff;
+}
+
 :root {
   --scrollerGrey: 219, 219, 219;
   --lightGrey: 227, 227, 227;
@@ -73,7 +77,7 @@ body {
 .container-wrapper--navigation {
   width: 100%;
   margin: 0 auto;
-  max-width: 89.5%;
+  max-width: 90%;
 }
 
 .header .appbar {
@@ -168,9 +172,56 @@ body {
 
 .section-title {
   padding: 0 0 1.1em 2.3em;
+  display: flex;
+  align-items: center;
+}
+.section-title .switcher {
+  margin-left: 1.5em;
+  display: flex;
+  border: 1px solid rgba(var(--tmdbDarkBlue));
+  border-radius: 1em;
+  height: 30px;
+  align-items: center;
+  overflow: hidden;
+}
+.section-title .switcher div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.8em;
+  height: 100%;
+}
+.section-title .switcher div:last-child {
+  margin-right: 0;
+}
+.section-title .switcher a {
+  padding: 0 0.6em;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: rgba(var(--tmdbDarkBlue), 1);
+}
+.section-title .switcher-active {
+  background-color: rgba(var(--tmdbDarkBlue), 1);
+  border-radius: 1em;
+}
+.section-title .switcher-active a {
+  color: rgba(var(--tmdbLightGreen));
 }
 
 .section-popular {
+  padding: 2em 0;
+  padding-bottom: 0;
+}
+
+.section-trailers .trailers {
+  background-image: linear-gradient(to right, rgba(var(--tmdbDarkBlue), 0.8), rgba(var(--tmdbDarkBlue), 0.6)), url("https://www.themoviedb.org/t/p/w533_and_h300_bestv2/9IsGcpX1p0iU3eRpiTFrWkg5qqj.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em 0;
+  padding-bottom: 0;
+}
+
+.section-trending {
   padding: 2em 0;
 }
 
@@ -187,6 +238,11 @@ body {
   height: 100%;
   background-image: linear-gradient(to left, #fff 20%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.02));
 }
+.flex-slider-container--video::after {
+  content: "";
+  width: 0;
+  height: 0;
+}
 
 .flex-container {
   width: 100%;
@@ -202,7 +258,7 @@ body {
   border-radius: 10px;
 }
 .flex-container .item {
-  margin-right: 1em;
+  margin-left: 1em;
   width: 100%;
   max-width: 155px;
   color: #000;
@@ -229,6 +285,78 @@ body {
   width: 41px;
   height: 41px;
   border-radius: 50%;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+}
+.flex-container .card {
+  max-width: 300px;
+  margin-left: 2em;
+  padding-bottom: 0.8em;
+}
+.flex-container .card-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  position: relative;
+  border-radius: 5px;
+}
+.flex-container .card-image img {
+  border-radius: 5px;
+  width: 100%;
+  min-width: 300px;
+}
+.flex-container .card-image:hover {
+  transform: scale(1.03);
+}
+.flex-container .card-play {
+  position: absolute;
+  color: #fff;
+}
+.flex-container .card-more {
+  position: absolute;
+  top: 0.6em;
+  right: 0.6em;
+  background-color: rgba(231, 231, 231, 0.6);
+  width: 23px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-container .card-more span {
+  display: block;
+  width: 3px;
+  height: 3px;
+  background-color: gray;
+  margin-right: 2px;
+}
+.flex-container .card-more span:last-child {
+  margin-right: 0;
+}
+.flex-container .card-more:hover {
+  background-color: rgba(var(--tmdbLightBlue), 1);
+}
+.flex-container .card-content {
+  padding-top: 0.6em;
+  text-align: center;
+}
+.flex-container .card-content a {
+  text-decoration: none;
+}
+.flex-container .card-content h2 {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.flex-container .card-content p {
+  font-size: 1rem;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
