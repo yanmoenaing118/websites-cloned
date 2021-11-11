@@ -1,0 +1,109 @@
+.header {
+  .appbar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(var(--tmdbDarkBlue), 1);
+    height: 64px;
+    // padding: 0 0.35em;
+  }
+  .nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .logo {
+      width: 154px;
+      margin-right: 1.6rem;
+      img {
+        width: 100%;
+        max-width: 154px;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+    }
+
+    ul li {
+      margin-right: 2em;
+      .en {
+        display: block;
+        border: 1px solid #fff;
+        padding: 0.123em;
+        border-radius: 3px;
+      }
+      .search {
+        color: rgba(var(--tmdbLightBlue), 1);
+        font-size: 1.4rem;
+      }
+    }
+    ul a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .right {
+      justify-self: flex-end;
+      margin-left: auto;
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .welcome {
+    &-wrapper {
+      h1,
+      h2 {
+        line-height: 1.6;
+      }
+      padding: 3.4em 2em;
+      background-image: linear-gradient(
+          to right,
+          rgba(var(--tmdbDarkBlue), 0.8) 0%,
+          rgba(var(--tmdbDarkBlue), 0) 100%
+        ),
+        url("https://www.themoviedb.org/t/p/w533_and_h300_bestv2/hiK4qc0tZijQ9KNUnBIS1k4tdMJ.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .search_form {
+      margin-top: 2.55em;
+      display: flex;
+      border-radius: 5.2em;
+      overflow: hidden;
+      &-input {
+        flex: 1;
+        padding: 0.9em 1em;
+        margin-right: -2em;
+        outline: none;
+        color: rgba(var(--darkerGrey), 1);
+        font-size: 1rem;
+
+        &::placeholder {
+          font-size: 1.6rem;
+          font: inherit;
+        }
+      }
+      &-btn {
+        width: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.35em 1em;
+        border-radius: 5em;
+        border: none;
+        outline: none;
+        background-image: linear-gradient(
+          to right,
+          rgba(var(--tmdbLightGreen), 1) 0%,
+          rgba(var(--tmdbLightBlue), 1) 100%
+        );
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}

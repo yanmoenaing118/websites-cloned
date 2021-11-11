@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  &-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1280px;
+
+    &--navigation {
+      width: 100%;
+      margin: 0 auto;
+      max-width: 89.5%;
+    }
+  }
+}

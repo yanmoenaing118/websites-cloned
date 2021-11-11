@@ -1,0 +1,234 @@
+.bold {
+  font-weight: 600;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.title {
+  font-size: 3rem;
+}
+.title--white {
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 2rem;
+}
+.subtitle--white {
+  color: #fff;
+}
+.subtitle--md {
+  font-size: 1.55rem;
+}
+.subtitle--sm {
+  font-size: 1rem;
+}
+:root {
+  --scrollerGrey: 219, 219, 219;
+  --lightGrey: 227, 227, 227;
+  --darkerGrey: 200, 200, 200;
+  --tmdbDarkBlue: 3, 37, 65;
+  --tmdbLightBlue: 1, 180, 228;
+  --tmdbLighterGreen: 192, 254, 207;
+  --tmdbLightGreen: 30, 213, 169;
+  --tmdbLogoGreen: 144, 206, 161;
+  --tmdbLogoOrange: 253, 193, 112;
+  --tmdbLogoRed: 217, 59, 99;
+  --accountSilver: 149, 149, 149;
+  --accountPink: 234, 20, 140;
+  --accountPurple: 128, 91, 231;
+  --accountGreen: 1, 210, 119;
+  --accountTeal: 1, 198, 172;
+  --accountLightBlue: 1, 180, 228;
+  --accountBlue: 1, 119, 210;
+  --accountOrange: 210, 119, 1;
+  --accountYellow: 210, 144, 1;
+  --accountRed: 212, 2, 66;
+  --imageBorderRadius: 8px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+.container-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.container-wrapper--navigation {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 89.5%;
+}
+
+.header .appbar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(var(--tmdbDarkBlue), 1);
+  height: 64px;
+}
+.header .nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header .nav .logo {
+  width: 154px;
+  margin-right: 1.6rem;
+}
+.header .nav .logo img {
+  width: 100%;
+  max-width: 154px;
+}
+.header .nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.header .nav ul li {
+  margin-right: 2em;
+}
+.header .nav ul li .en {
+  display: block;
+  border: 1px solid #fff;
+  padding: 0.123em;
+  border-radius: 3px;
+}
+.header .nav ul li .search {
+  color: rgba(var(--tmdbLightBlue), 1);
+  font-size: 1.4rem;
+}
+.header .nav ul a {
+  text-decoration: none;
+  color: #fff;
+}
+.header .nav .right {
+  justify-self: flex-end;
+  margin-left: auto;
+}
+.header .nav .right li:last-child {
+  margin-right: 0;
+}
+.header .welcome-wrapper {
+  padding: 3.4em 2em;
+  background-image: linear-gradient(to right, rgba(var(--tmdbDarkBlue), 0.8) 0%, rgba(var(--tmdbDarkBlue), 0) 100%), url("https://www.themoviedb.org/t/p/w533_and_h300_bestv2/hiK4qc0tZijQ9KNUnBIS1k4tdMJ.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header .welcome-wrapper h1,
+.header .welcome-wrapper h2 {
+  line-height: 1.6;
+}
+.header .welcome .search_form {
+  margin-top: 2.55em;
+  display: flex;
+  border-radius: 5.2em;
+  overflow: hidden;
+}
+.header .welcome .search_form-input {
+  flex: 1;
+  padding: 0.9em 1em;
+  margin-right: -2em;
+  outline: none;
+  color: rgba(var(--darkerGrey), 1);
+  font-size: 1rem;
+}
+.header .welcome .search_form-input::placeholder {
+  font-size: 1.6rem;
+  font: inherit;
+}
+.header .welcome .search_form-btn {
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.35em 1em;
+  border-radius: 5em;
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to right, rgba(var(--tmdbLightGreen), 1) 0%, rgba(var(--tmdbLightBlue), 1) 100%);
+  color: #fff;
+  cursor: pointer;
+}
+
+.section-title {
+  padding: 0 0 1.1em 2.3em;
+}
+
+.section-popular {
+  padding: 2em 0;
+}
+
+.flex-slider-container {
+  position: relative;
+}
+.flex-slider-container::after {
+  content: "";
+  display: table;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  background-image: linear-gradient(to left, #fff 20%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.02));
+}
+
+.flex-container {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+}
+.flex-container::-webkit-scrollbar {
+  height: 8px;
+  border-radius: 10px;
+}
+.flex-container::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 10px;
+}
+.flex-container .item {
+  margin-right: 1em;
+  width: 100%;
+  max-width: 155px;
+  color: #000;
+  font-size: 1.3rem;
+  padding-bottom: 1em;
+}
+.flex-container .item img {
+  border-radius: 0.5em;
+  width: 100%;
+  min-width: 155px;
+  box-shadow: 0 2px 5px rgba(var(--lightGrey, 0.2));
+}
+.flex-container .item-content {
+  position: relative;
+}
+.flex-container .item-content h3 {
+  padding-top: 1em;
+}
+.flex-container .item-circle {
+  position: absolute;
+  top: -50%;
+  left: 10px;
+  background-color: rgba(var(--tmdbDarkBlue), 1);
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */
