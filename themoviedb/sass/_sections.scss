@@ -1,0 +1,105 @@
+.section-popular {
+  padding: 2em 0;
+  padding-bottom: 0;
+}
+
+.section-trailers {
+  .trailers {
+    background-image: linear-gradient(
+        to right,
+        rgba(var(--tmdbDarkBlue), 0.8),
+        rgba(var(--tmdbDarkBlue), 0.6)
+      ),
+      url("https://www.themoviedb.org/t/p/w533_and_h300_bestv2/9IsGcpX1p0iU3eRpiTFrWkg5qqj.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em 0;
+    padding-bottom: 0;
+  }
+}
+
+.section-trending {
+  padding: 2em 0 0 0;
+}
+
+.section-join {
+  .join {
+    padding: 2.2em 2em;
+    background-image: url("https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces_filter(duotone,190235,ad47dd)/lMnoYqPIAVL0YaLP5YjRy7iwaYv.jpg");
+    background-position: center;
+    h1 {
+      color: #fff;
+      font-size: 1.95rem;
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      @include respond(tablet) {
+        flex-direction: column;
+      }
+    }
+    &-left {
+      width: 59%;
+      p {
+        margin: 0.95em 0;
+        color: #fff;
+        font-size: 1.2rem;
+        em {
+          font-style: italic;
+        }
+      }
+      @include respond(tablet) {
+        width: 100%;
+        margin-bottom: 1em;
+      }
+    }
+
+    &-right {
+      width: 36%;
+
+      padding-left: 1.3em;
+
+      ul {
+        color: rgba(var(--lightGrey), 1);
+        li {
+          font-size: 1rem;
+        }
+      }
+      @include respond(tablet) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.section-leaderboard {
+  .leaderboard {
+    padding: 2em 0;
+    margin: 0 auto;
+    max-width: 90%;
+
+    &-users {
+      margin-top: 0.8em;
+      display: flex;
+      justify-content: space-between;
+      &-left {
+        width: 49.1%;
+        @include respond(tablet) {
+          width: 100%;
+        }
+      }
+      &-right {
+        width: 49.1%;
+        @include respond(tablet) {
+          width: 100%;
+        }
+      }
+
+      @include respond(tablet) {
+        flex-direction: column;
+      }
+    }
+  }
+}

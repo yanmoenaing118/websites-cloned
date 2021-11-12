@@ -1,0 +1,42 @@
+.bold {
+  font-weight: 600;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.title {
+  font-size: 3rem;
+
+  &--white {
+    color: #fff;
+  }
+}
+
+.subtitle {
+  font-size: 2rem;
+
+  &--white {
+    color: #fff;
+  }
+
+  &--md {
+    font-size: 1.55rem;
+
+    @include respond(tablet) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &--sm {
+    font-size: 1rem;
+  }
+
+  &--thin {
+  }
+}
+
+.color-white {
+  color: #fff;
+}
