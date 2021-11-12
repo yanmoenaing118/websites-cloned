@@ -23,6 +23,10 @@
 
   &--md {
     font-size: 1.55rem;
+
+    @include respond(tablet) {
+      font-size: 1.2rem;
+    }
   }
 
   &--sm {

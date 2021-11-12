@@ -10,5 +10,16 @@
       margin: 0 auto;
       max-width: 90%;
     }
+
+    &--footer {
+      width: 100%;
+      margin: 0 auto;
+      max-width: 870px;
+    }
+
+    @include respond(desktop) {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 }

@@ -35,15 +35,13 @@
     border-radius: 10px;
   }
 
-  &::-webkit-scrollbar-track {
-  }
-
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(gray, 0.3);
+    background-color: gainsboro;
     border-radius: 10px;
   }
 
   .item {
+    text-decoration: none;
     margin-left: 1em;
     width: 100%;
     max-width: 155px;
