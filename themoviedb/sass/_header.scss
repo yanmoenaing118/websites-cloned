@@ -66,7 +66,10 @@
       }
     }
     .menu {
-      color: #fff;
+      width: 24.6px;
+      height: 24.6px;
+      background-image: url("https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-600-menu-7ef6e3f4266b4b216a8ef5920da43fc8c96e1ee805a219c5628fed5bfac854d5.svg");
+      filter: invert(1);
       @include respond-up(laptop) {
         display: none;
       }
