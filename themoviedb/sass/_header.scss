@@ -1,0 +1,211 @@
+.header {
+  .appbar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(var(--tmdbDarkBlue), 1);
+    height: 64px;
+    // padding: 0 0.35em;
+  }
+  .nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .logo {
+      width: 154px;
+      margin-right: 1.6rem;
+      img {
+        width: 100%;
+        max-width: 154px;
+      }
+      @include respond(tablet) {
+        display: none;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+
+      @include respond(tablet) {
+        display: none;
+      }
+    }
+
+    ul li {
+      margin-right: 2em;
+      .en {
+        display: block;
+        border: 1px solid #fff;
+        padding: 0.123em;
+        border-radius: 3px;
+      }
+      .search {
+        color: rgba(var(--tmdbLightBlue), 1);
+        font-size: 1.4rem;
+      }
+    }
+    ul a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .right {
+      justify-self: flex-end;
+      margin-left: auto;
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .logo-center {
+      width: 100%;
+      max-width: 50px;
+      @include respond-up(laptop) {
+        display: none;
+      }
+    }
+    .menu {
+      color: #fff;
+      @include respond-up(laptop) {
+        display: none;
+      }
+    }
+
+    .auth-search {
+      display: flex;
+      align-items: center;
+      .auth {
+        width: 24.6px;
+        height: 24.6px;
+        margin-right: 0.8em;
+        background-image: url("https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-7de7dfcae838579a18f4eebc5b8847230d154718e481c5cd01c477cfcbc85993.svg");
+
+        filter: invert(1);
+      }
+
+      .search {
+        color: #fff;
+      }
+
+      @include respond-up(laptop) {
+        display: none;
+      }
+    }
+
+    @include respond(tablet) {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .welcome {
+    &-wrapper {
+      h1,
+      h2 {
+        line-height: 1.6;
+        @include respond(tablet) {
+          font-size: 1.5rem;
+        }
+      }
+      padding: 3.4em 2em;
+      background-image: linear-gradient(
+          to right,
+          rgba(var(--tmdbDarkBlue), 0.9) 0%,
+          rgba(var(--tmdbDarkBlue), 0.8) 100%
+        ),
+        url("https://www.themoviedb.org/t/p/w533_and_h300_bestv2/hiK4qc0tZijQ9KNUnBIS1k4tdMJ.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .search_form {
+      margin-top: 2.55em;
+      display: flex;
+      border-radius: 5.2em;
+      overflow: hidden;
+      &-input {
+        flex: 1;
+        padding: 0.9em 1em;
+        margin-right: -2em;
+        outline: none;
+        color: rgba(var(--darkerGrey), 1);
+        font-size: 1rem;
+
+        &::placeholder {
+          font-size: 1.6rem;
+          font: inherit;
+        }
+
+        @include respond(mobile) {
+          padding: 0.75em 0.9em;
+          font-size: 0.85rem;
+        }
+      }
+      &-btn {
+        width: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.35em 1em;
+        border-radius: 5em;
+        border: none;
+        outline: none;
+        background-image: linear-gradient(
+          to right,
+          rgba(var(--tmdbLightGreen), 1) 0%,
+          rgba(var(--tmdbLightBlue), 1) 100%
+        );
+        color: #fff;
+        cursor: pointer;
+        @include respond(mobile) {
+          width: 100px;
+          pad: 0.25em 0.75em;
+        }
+      }
+
+      @include respond(tablet) {
+        margin-top: 1.8em;
+      }
+    }
+  }
+}
+
+.mobile-sidebar {
+  display: none;
+  height: calc(100vh - 64px);
+  background-color: rgba(var(--tmdbDarkBlue), 1);
+  padding: 2em 1.8em;
+  width: 85%;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in;
+
+  &-nav {
+    list-style: none;
+    li {
+      a {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.6);
+        padding: 0.8em 0;
+      }
+      margin-bottom: 0.8em;
+      a.main-nav {
+        font-size: 0.9rem;
+        color: #fff;
+      }
+    }
+  }
+
+  @include respond(tablet) {
+    display: block;
+  }
+}
+
+.hide {
+  left: -100%;
+}
