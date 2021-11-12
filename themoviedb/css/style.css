@@ -164,6 +164,8 @@ body {
   }
 }
 .header .nav .menu {
+  width: 32px;
+  height: 32px;
   color: #fff;
 }
 @media (min-width: 769px) {
