@@ -1,0 +1,7 @@
+.main-container {
+  height: calc(100vh - 53px);
+  margin-top: 53px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory; //   scroll-behavior: smooth;
+}

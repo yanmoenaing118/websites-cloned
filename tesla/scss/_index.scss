@@ -1,0 +1,36 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 800px) {
+      @content;
+    }
+  }
+}
+
+$font-gothic-a1: "Gothic A1", sans-serif;
+$font-nanum: "Nanum Gothic", sans-serif;
+
+$tds-color--grey10: #181b21;
+$tds-color--grey20: #393c41;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: $font-gothic-a1;
+}
