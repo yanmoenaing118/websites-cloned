@@ -1,0 +1,94 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  .tesla-report {
+    height: 53px;
+    @include flex-center;
+    background-color: #fff;
+    a {
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: rgba($tds-color--grey20, 0.75);
+      font-weight: 700;
+      box-shadow: 0 1px 0px rgba($tds-color--grey20, 0.9);
+    }
+  }
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.8em;
+  height: 60px;
+  position: relative;
+  z-index: 3000;
+
+  .link-mouseover {
+    position: fixed;
+    background-color: rgba(#eee, 0.86);
+    border-radius: 16px;
+    z-index: 200;
+    transition: all 0.2s ease;
+  }
+
+  .logo {
+    width: 168px;
+    padding-left: 3%;
+
+    @include respond(mobile) {
+      width: 120px;
+    }
+  }
+
+  .navs {
+    position: relative;
+    width: 76%;
+    display: flex;
+    justify-content: space-between;
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        a {
+          display: inline-block;
+          text-decoration: none;
+          padding: 0.45em 1em;
+          font-family: $font-nanum;
+          color: $tds-color--grey10;
+          font-weight: 700;
+          cursor: pointer;
+          position: relative;
+          z-index: 300;
+        }
+      }
+      &:not(:last-child) {
+        margin-left: 4.3em;
+      }
+    }
+
+    .navigation--models {
+      @include respond(tablet) {
+        display: none;
+      }
+    }
+
+    .navigation--menu {
+      li {
+        @include respond(tablet) {
+          display: none;
+
+          &.menu {
+            display: block;
+          }
+        }
+      }
+    }
+
+    @include respond(tablet) {
+      justify-content: flex-end;
+    }
+  }
+}

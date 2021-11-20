@@ -1,0 +1,144 @@
+@mixin adjust-background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes animateBox {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animateDownArrow {
+  to {
+    transform: translateY(8px);
+    opacity: 0.6;
+  }
+}
+
+.show {
+  animation: animateBox 0.6s ease;
+  animation-fill-mode: forwards;
+}
+
+.section {
+  scroll-snap-align: start;
+  height: 100%;
+  @include adjust-background;
+
+  &-textbox {
+    opacity: 0;
+    position: fixed;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 2.125rem;
+      font-weight: 700;
+      color: $tds-color--grey20;
+    }
+
+    p {
+      line-height: 0.9;
+      color: $tds-color--grey10;
+      a {
+        color: inherit;
+        text-decoration: none;
+        display: inline-block;
+        border-bottom: 1px solid currentColor;
+        &:hover {
+          border-bottom: 1.5px solid currentColor;
+        }
+      }
+
+      @include respond(mobile) {
+        line-height: 1;
+      }
+    }
+
+    @include respond(mobile) {
+      width: 80%;
+    }
+  }
+
+  &-actions {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    position: fixed;
+    bottom: 13%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    & > button {
+      cursor: pointer;
+      text-transform: uppercase;
+      margin: 0.8em;
+      border: none;
+      padding: 1em 0;
+      font-size: 0.8rem;
+      min-width: 270px;
+      border-radius: 3.5em;
+      font-weight: 400;
+
+      background-color: hsla(0, 0%, 100%, 0.65);
+
+      &:first-child {
+        background-color: rgba(23, 26, 32, 0.8);
+        color: #fff;
+      }
+    }
+    @include respond(mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &-1 {
+    background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/676da95d-942e-414c-8534-f1832f0d4ced/bvlatuR/std/3296x1798/ms-homepage-desktop);
+
+    .blinking-arrow {
+      position: relative;
+      top: 86%;
+      left: 50%;
+      animation: animateDownArrow 0.9s alternate infinite;
+    }
+  }
+
+  &-2 {
+    background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/8e2df1b9-a4bf-4eb9-beec-2cf5cc77fca0/bvlatuR/std/2880x2400/Desktop-ModelY?quality=70);
+  }
+
+  &-3 {
+    background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/e90a341e-f9ca-4aa1-8eab-94afea118786/bvlatuR/std/2880x1800/M3-Homepage-D);
+  }
+
+  &-4 {
+    background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/325743a2-d187-4e28-91a3-5a2e47e317f7/bvlatuR/std/2880x1800/ModelX-Homepage-D);
+  }
+
+  &-5 {
+    background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/16b04537-a4be-4bf9-8637-86862a858da8/bvlatuR/std/2880x1800/_25-HP-SolarPanels-D);
+  }
+  &-6 {
+    background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/c877126e-0db5-409d-a412-04fc94b59b76/bvlatuR/std/2880x1800/HP-SR-Design-D);
+  }
+  &-7 {
+    background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/dd739764-bcaa-4263-9488-8c73bc9fb046/bvlatuR/std/2880x2400/Desktop-Accessories);
+
+    @include respond(mobile) {
+      .section-box {
+        .section-actions {
+          margin-bottom: 6em;
+        }
+      }
+    }
+  }
+}
