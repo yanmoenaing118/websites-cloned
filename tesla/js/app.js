@@ -48,3 +48,17 @@ navLinks.forEach((link) => {
 navs.addEventListener("mouseleave", (e) => {
   linkMouseOver.style.display = "none";
 });
+
+const mobileMenu = document.querySelector(".navigation--menu .menu");
+const closeMobileNavBtn = document.querySelector(".mobile-navs-closebtn");
+const mobileBackdrop = document.querySelector(".mobile-dropback");
+const mobileNavs = document.querySelector(".mobile-navs");
+
+mobileMenu.addEventListener("click", (e) => {
+  mobileBackdrop.style.zIndex = 1000;
+  mobileNavs.style.right = 0;
+});
+closeMobileNavBtn.addEventListener("click", (e) => {
+  mobileNavs.style.right = "-100%";
+  mobileBackdrop.style.zIndex = -1000;
+});
