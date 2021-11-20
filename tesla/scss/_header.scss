@@ -35,8 +35,12 @@
   }
 
   .logo {
-    width: 140px;
+    width: 168px;
     padding-left: 3%;
+
+    @include respond(mobile) {
+      width: 120px;
+    }
   }
 
   .navs {
