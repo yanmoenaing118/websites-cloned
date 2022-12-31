@@ -1,0 +1,37 @@
+.section {
+  // Hero start
+  &_hero {
+    background-color: aqua;
+    margin-top: -60px;
+    background-image: url(../assets/back_1.webp);
+
+    &_wrapper {
+      height: 800px;
+    }
+
+    &_desc {
+      grid-column: 1 / 6;
+      height: 100%;
+      z-index: 1;
+      position: relative;
+
+      .textbox {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    &_img {
+      grid-column: 6 / -2;
+      height: 100%;
+      background-image: url(../assets/front_1.webp);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top center;
+
+    }
+
+    &_navigation {
+        grid-column: 12 / -1;
+    }
+  }
+}

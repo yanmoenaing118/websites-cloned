@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Source+Sans+Pro:wght@300;400;700&display=swap");
 :root {
-  --max-width: 1200px;
+  --max-width: 1332px;
   --appbar-height: 60px;
   --font-roboto: "Roboto", sans-serif;
   --font-source: "Source Sans Pro", sans-serif;
@@ -46,7 +46,10 @@ body {
 }
 
 .header {
-  background-color: #0a0b0f;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .header_wrapper {
   display: flex;
@@ -186,6 +189,36 @@ body {
 }
 .header ul li a {
   color: inherit;
+}
+
+.section_hero {
+  background-color: aqua;
+  margin-top: -60px;
+  background-image: url(../assets/back_1.webp);
+}
+.section_hero_wrapper {
+  height: 800px;
+}
+.section_hero_desc {
+  grid-column: 1/6;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+}
+.section_hero_desc .textbox {
+  position: absolute;
+  bottom: 0;
+}
+.section_hero_img {
+  grid-column: 6/-2;
+  height: 100%;
+  background-image: url(../assets/front_1.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.section_hero_navigation {
+  grid-column: 12/-1;
 }
 
 /*# sourceMappingURL=style.css.map */
