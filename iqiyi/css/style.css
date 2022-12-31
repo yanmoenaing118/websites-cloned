@@ -200,7 +200,7 @@ body {
   height: 800px;
 }
 .section_hero_desc {
-  grid-column: 1/6;
+  grid-column: 1/5;
   height: 100%;
   z-index: 1;
   position: relative;
@@ -209,8 +209,21 @@ body {
   position: absolute;
   bottom: 0;
 }
+.section_hero_desc .textbox_title {
+  width: 20.5vw;
+  min-width: 180px;
+  max-width: 360px;
+  height: 13.67vw;
+  max-height: 240px;
+  min-height: 120px;
+  background-size: 100% auto;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  color: rgb(230, 230, 230);
+  background-image: url(../assets/title_1.webp);
+}
 .section_hero_img {
-  grid-column: 6/-2;
+  grid-column: 5/-2;
   height: 100%;
   background-image: url(../assets/front_1.webp);
   background-size: contain;
