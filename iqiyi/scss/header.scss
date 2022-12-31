@@ -59,7 +59,7 @@
 
     .search {
       display: grid;
-      grid-template-columns: 204px 36px;
+      grid-template-columns: 196px 44px;
       grid-template-rows: 36px;
       input {
         display: block;
@@ -68,7 +68,7 @@
         border: none;
         width: 240px;
         height: 36px;
-        padding: 0px 53px 0px 12px;
+        padding: 0px 53px 0px 18px;
         border-radius: 4px;
         background: rgba(255, 255, 255, 0.2);
         color: rgba(255, 255, 255, 0.6);
@@ -87,14 +87,14 @@
         position: relative;
         display: flex;
         align-items: center;
-        padding-left: 8px;
+        padding-left: 12px;
         color: rgba(255, 255, 255, 0.6);
         
         &::before {
             position: absolute;
             display: block;
             content: "";
-            height: 50%;
+            height: 40%;
             width: 1px;
             left: 0;
             background-color: rgba(255, 255, 255, 0.5);
