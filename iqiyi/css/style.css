@@ -53,6 +53,9 @@ body {
   justify-content: space-between;
   height: var(--appbar-height);
 }
+.header_left {
+  gap: 32px;
+}
 .header_left li a.for_you {
   font-weight: 900;
   color: white;
@@ -82,10 +85,8 @@ body {
 .header_left li a:hover {
   color: var(--primary-color);
 }
-.header_right li.app_vip {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+.header_right {
+  gap: 40px;
 }
 .header_right .search {
   display: grid;
@@ -129,9 +130,55 @@ body {
   left: 0;
   background-color: rgba(255, 255, 255, 0.5);
 }
+.header_right li .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.header_right li .box span {
+  font-size: 1.2rem;
+}
+.header_right li .box svg g {
+  fill: currentColor;
+}
+.header_right li .box:hover {
+  color: var(--primary-color);
+}
+.header_right .app_vip {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header_right .app_vip button {
+  width: 82px;
+  height: 36px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.header_right .app_vip--app {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.header_right .app_vip--app svg g {
+  fill: currentColor;
+}
+.header_right .app_vip--app:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.header_right .app_vip--vip {
+  border: none;
+  background-color: #F2BF84;
+}
 .header ul {
   display: flex;
-  gap: 30px;
   align-items: center;
 }
 .header ul li {
