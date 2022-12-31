@@ -3,7 +3,7 @@
   &_hero {
     background-color: aqua;
     margin-top: -60px;
-    background-image: url(../assets/back_1.webp);
+    background-image:  linear-gradient(to top, rgba(#000,0.3), rgba(#000,.6)), url(../assets/back_1.webp);
 
     &_wrapper {
       height: 800px;
@@ -31,6 +31,46 @@
           background-repeat: no-repeat;
           color: rgb(230, 230, 230);
           background-image: url(../assets/title_1.webp);
+        }
+
+        &_meta {
+            display: flex;
+        }
+
+        &_geners {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 1rem;
+            span {
+    
+                padding: 0px 5px;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 2px;
+                font-size: 1.2rem;
+                color: white;
+                text-shadow: -1px 0 1px rgba(#000,.6);
+            }
+        }
+        &_about {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 300;
+            line-height: 1.5;
+            margin-bottom: 3rem;
+        }
+        &_actions {
+            display: flex;
+            gap: 14px;
+
+            button {
+                cursor: pointer;
+                display: block;
+                background: none;
+                border: none;
+                svg {
+                    transform: scale(0.9);
+                }
+            }
         }
       }
     }

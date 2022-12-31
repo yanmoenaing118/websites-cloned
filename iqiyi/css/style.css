@@ -194,7 +194,7 @@ body {
 .section_hero {
   background-color: aqua;
   margin-top: -60px;
-  background-image: url(../assets/back_1.webp);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(../assets/back_1.webp);
 }
 .section_hero_wrapper {
   height: 800px;
@@ -221,6 +221,42 @@ body {
   background-repeat: no-repeat;
   color: rgb(230, 230, 230);
   background-image: url(../assets/title_1.webp);
+}
+.section_hero_desc .textbox_meta {
+  display: flex;
+}
+.section_hero_desc .textbox_geners {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+.section_hero_desc .textbox_geners span {
+  padding: 0px 5px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: -1px 0 1px rgba(0, 0, 0, 0.6);
+}
+.section_hero_desc .textbox_about {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+.section_hero_desc .textbox_actions {
+  display: flex;
+  gap: 14px;
+}
+.section_hero_desc .textbox_actions button {
+  cursor: pointer;
+  display: block;
+  background: none;
+  border: none;
+}
+.section_hero_desc .textbox_actions button svg {
+  transform: scale(0.9);
 }
 .section_hero_img {
   grid-column: 5/-2;
