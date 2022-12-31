@@ -1,79 +1,119 @@
 .header {
-    background-color: #0A0B0F;
+  background-color: #0a0b0f;
 
-    &_wrapper {
-        display: flex;
-        justify-content: space-between;
-        height: var(--appbar-height);
-    }
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: var(--appbar-height);
+  }
 
-    &_left {
-        li {
-            a {
-                &.for_you {
-                    font-weight: 900;
-                    color: white;
-                    text-transform: capitalize;
-                    font-size: 1.65rem;
+  &_left {
+    li {
+      a {
+        &.for_you {
+          font-weight: 900;
+          color: white;
+          text-transform: capitalize;
+          font-size: 1.65rem;
+        }
 
-                }
+        &.more {
+          span {
+            display: inline-block;
+            vertical-align: middle;
+            top: -0.01rem rem;
+            position: relative;
+            font-size: 0px;
+            margin-left: 5px;
+            width: 0px;
+            height: 0px;
+            border-left: 4px solid transparent;
+            border-top: 4px solid #9c9d9e;
+            border-right: 4px solid transparent;
+          }
 
-                &.more {
-                    span {
-                        display: inline-block;
-                        vertical-align: middle;
-                        top: -0.01rem rem;
-                        position: relative;
-                        font-size: 0px;
-                        margin-left: 5px;
-                        width: 0px;
-                        height: 0px;
-                        border-left: 4px solid transparent;
-                        border-top: 4px solid #9C9D9E;
-                        border-right: 4px solid transparent;
-                    }
-
-                    &:hover {
-                        span {
-                            margin-top: -6px;
-                            border-left: 4px solid transparent;
-                            border-bottom: 4px solid var(--primary-color);
-                            border-top: 4px solid transparent;
-                            border-right: 4px solid transparent;
-                        }
-                    }
-
-                }
-
-                &:hover {
-                    color: var(--primary-color);
-                }
+          &:hover {
+            span {
+              margin-top: -6px;
+              border-left: 4px solid transparent;
+              border-bottom: 4px solid var(--primary-color);
+              border-top: 4px solid transparent;
+              border-right: 4px solid transparent;
             }
-        }
-    }
-
-    &_right {
-
-        li.app_vip {
-            display: flex;
-            align-items: center;
-            gap: 30px;
+          }
         }
 
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  &_right {
+    li.app_vip {
+      display: flex;
+      align-items: center;
+      gap: 30px;
     }
 
-    ul {
+    .search {
+      display: grid;
+      grid-template-columns: 204px 36px;
+      grid-template-rows: 36px;
+      input {
+        display: block;
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+        border: none;
+        width: 240px;
+        height: 36px;
+        padding: 0px 53px 0px 12px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.6);
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &_button {
+        grid-row: 1 / -1;
+        grid-column: 2 / 4;
+        background: transparent;
+        border: none;
+        display: block;
+        height: 36px;
+        position: relative;
         display: flex;
-        gap: 30px;
         align-items: center;
-
-        li {
-            color: #9C9D9E;
-
-            a {
-                color: inherit;
-
-            }
+        padding-left: 8px;
+        color: rgba(255, 255, 255, 0.6);
+        
+        &::before {
+            position: absolute;
+            display: block;
+            content: "";
+            height: 50%;
+            width: 1px;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.5);
         }
+      }
     }
+  }
+
+  ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    li {
+      color: #9c9d9e;
+
+      a {
+        color: inherit;
+      }
+    }
+  }
 }
