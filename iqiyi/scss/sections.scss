@@ -33,8 +33,63 @@
           background-image: url(../assets/title_1.webp);
         }
 
-        &_meta {
+        &_top {
+          display: flex;
+          font-size: 1.2rem;
+          color: white;
+          font-weight: 500;
+          gap: 4px;
+          margin-bottom: 1.5rem;
+          
+          .top {
             display: flex;
+            border-radius: 6px;
+            div:first-child {
+
+              background-color: var(--primary-color);
+            }
+
+            div {
+            padding: 2px 4px;
+            background: rgba(255, 255, 255, 0.3);
+
+            }
+          }
+
+          .release {
+            padding: 2px 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+          }
+        }
+
+        &_meta {
+          display: flex;
+          margin-bottom: 1.5rem;
+            span {
+              font-size: 1.2rem;
+              color: white;
+              font-weight: 500;
+              position: relative;
+              display: block;
+              padding: 0 8px;
+              display: flex;
+              align-items: center;
+
+              &.rating svg{
+                transform: scale(.95);
+              }
+
+              &:not(:last-child)::after {
+                content: "";
+                position: absolute;
+                width: 1.5px;
+                height: 10px;
+                right: 0;
+                background-color: rgba(255, 255, 255, 0.6);
+               
+              }
+            }
         }
 
         &_geners {
@@ -86,5 +141,7 @@
     &_navigation {
       grid-column: 12 / -1;
     }
+
+
   }
 }

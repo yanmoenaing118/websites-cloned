@@ -222,8 +222,54 @@ body {
   color: rgb(230, 230, 230);
   background-image: url(../assets/title_1.webp);
 }
+.section_hero_desc .textbox_top {
+  display: flex;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+  gap: 4px;
+  margin-bottom: 1.5rem;
+}
+.section_hero_desc .textbox_top .top {
+  display: flex;
+  border-radius: 6px;
+}
+.section_hero_desc .textbox_top .top div:first-child {
+  background-color: var(--primary-color);
+}
+.section_hero_desc .textbox_top .top div {
+  padding: 2px 4px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.section_hero_desc .textbox_top .release {
+  padding: 2px 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
 .section_hero_desc .textbox_meta {
   display: flex;
+  margin-bottom: 1.5rem;
+}
+.section_hero_desc .textbox_meta span {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  display: block;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+}
+.section_hero_desc .textbox_meta span.rating svg {
+  transform: scale(0.95);
+}
+.section_hero_desc .textbox_meta span:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 1.5px;
+  height: 10px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .section_hero_desc .textbox_geners {
   display: flex;
